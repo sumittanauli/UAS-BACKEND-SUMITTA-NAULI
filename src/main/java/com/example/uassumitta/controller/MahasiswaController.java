@@ -45,19 +45,19 @@ public class MahasiswaController {
         return mahasiswaService.getById(id);
     }
 
-  // http://localhost:8088/region/1   (PathVariable) Detail
+  // http://localhost:8088/matakuliah/1   (PathVariable) Detail
     @PostMapping
     public Mahasiswa create(@RequestBody Mahasiswa mahasiswa) {
         return mahasiswaService.create(mahasiswa);
     }
 
-  // http://localhost:8088/country
+  // http://localhost:8088/mahasiswa
     @PutMapping("/{id}")
     public Mahasiswa update(@PathVariable Long id, @RequestBody Mahasiswa mahasiswa) {
         return mahasiswaService.update(id, mahasiswa);
     }
 
-  // http://localhost:8088/country/1
+  // http://localhost:8088/mahasiswa/1
     @DeleteMapping("/{id}")
     public Mahasiswa delete(@PathVariable Long id) {
         return mahasiswaService.delete(id);
